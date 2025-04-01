@@ -2,8 +2,8 @@
 
 abstract class AppAssets
 {
-   static const  String logo1 ="assets/Images/Group 9219.svg";
-   static const String logo2 ="assets/Images/Group 11.svg";
+   static const  String logo2 ="assets/Images/bi_qr-code-scan.svg";
+   static const String logo1 ="assets/Images/Group 1.svg";
    static const String historyButtonIcon="assets/Images/Vector (14).svg";
    static const String GenerateButtonIcon="assets/Images/Vector (15).svg";
    static const String RemoveIcon = "assets/Images/Vector (38).svg";

@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:qr_code/Core/Utils/App_Routers.dart';
 
 void main ()
 {
@@ -13,6 +14,9 @@ class Qr_Code extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp();
+    return  MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: router,
+    );
   }
 }
