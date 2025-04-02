@@ -29,9 +29,11 @@ class Customcard extends StatelessWidget {
             children: [
               SvgPicture.asset(cardclass.image),
               SizedBox(height: 10),
-              Text(
-                cardclass.Text,
-                style: TextStyle(color: AppColors.primaryColor),
+              FittedBox(
+                child: Text(
+                  cardclass.Text,
+                  style: TextStyle(color: AppColors.primaryColor),
+                ),
               ),
             ],
           ),

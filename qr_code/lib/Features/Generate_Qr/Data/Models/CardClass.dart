@@ -4,7 +4,7 @@ class Cardclass
 {
  final String Text;
  final String image;
-final  VoidCallback onPressed;
+final  VoidCallback? onPressed;
 
   Cardclass({required this.Text, required this.image,required this.onPressed});
 
