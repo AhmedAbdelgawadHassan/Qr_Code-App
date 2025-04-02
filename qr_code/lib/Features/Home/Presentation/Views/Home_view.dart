@@ -1,11 +1,7 @@
 // ignore_for_file: unused_field, unused_element
 
 import 'package:flutter/material.dart';
-import 'package:qr_code/Features/Generate_Qr/Presentation/Views/Generate_view.dart';
-import 'package:qr_code/Features/History/Presentation/Views/History_View.dart';
 import 'package:qr_code/Features/Home/Presentation/views/widgets/AppBar_Icon.dart';
-import 'package:qr_code/Features/Home/Presentation/views/widgets/CustomButtonBar.dart';
-
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -47,12 +43,7 @@ class HomeView extends StatelessWidget {
                 ],
               ),
             ),
-            // Spacer(),
-            // CustomBottomBar(
-            //   mainButtonOnTap: () {},
-            //   GenerateOnTap: () {},
-            //   HistoreyOnTap: () {},
-            // ),
+         
           ],
         ),
       ),
