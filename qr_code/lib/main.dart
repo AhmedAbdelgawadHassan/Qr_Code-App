@@ -17,6 +17,9 @@ class Qr_Code extends StatelessWidget {
     return  MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: router,
+      theme: ThemeData(
+        fontFamily: 'Itim',
+      ),
     );
   }
 }

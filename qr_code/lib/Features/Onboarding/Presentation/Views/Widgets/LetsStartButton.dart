@@ -7,38 +7,46 @@ class Letstartbutton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        context.go('/Onboarding2');
-      },
-      child: Container(
-        padding: EdgeInsets.only(right: 15),
-          alignment: Alignment.center,
-          width: 320,
-          height: 60,
-          decoration: BoxDecoration(color: AppColors.secondaryColor,
-          borderRadius: BorderRadius.circular(10)),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                "Let's Start",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
+    return Container(
+      width: 275,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: const Color.fromARGB(255, 228, 223, 223),
+            offset: Offset(3, 5),
+            blurRadius: 10
+            ),
+        ],
+        borderRadius: BorderRadius.circular(30),
+      ),
+
+      child: MaterialButton(
+        height: 55,
+        color: AppColors.secondaryColor,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+                      "Let's Start",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 55),
+                 Icon(
+                  Icons.arrow_forward,
+                  color: AppColors.primaryColor,
+                  size: 30,
                 ),
-              ),
-              SizedBox(
-                width: 70,
-              ),
-              Icon(
-                Icons.arrow_forward,
-                color: AppColors.primaryColor,
-                size: 30,
-              )
-            ],
-          )),
+          ],
+        ),
+               
+        onPressed: (){
+          context.go('/Onboarding2');
+        }),
     );
   }
 }

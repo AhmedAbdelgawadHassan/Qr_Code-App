@@ -7,23 +7,24 @@ class Getstartedcircularbutton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: ontap,
-      child: Container(
-        width: 85,
-        height: 85,
-        decoration: BoxDecoration(
-          color:AppColors.primaryColor,
-         borderRadius: BorderRadius.circular(100),
-         boxShadow: [
+    return Container(
+      width: 85,
+      height: 85,
+      decoration: BoxDecoration(
+        color: AppColors.primaryColor,
+        borderRadius: BorderRadius.circular(100),
+        boxShadow: [
           BoxShadow(
             color: AppColors.primaryColor,
             offset: Offset(0, 0),
-            blurRadius: 10
-          )
-         ]
-        ),
-        child: Icon(Icons.arrow_forward, color: Colors.black,size: 30,),
+            blurRadius: 10,
+          ),
+        ],
+      ),
+      child: MaterialButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+        onPressed: ontap,
+        child: Icon(Icons.arrow_forward, color: Colors.black, size: 30),
       ),
     );
   }

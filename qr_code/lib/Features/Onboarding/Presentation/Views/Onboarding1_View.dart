@@ -17,8 +17,8 @@ class Onboarding1View extends StatelessWidget {
         children: [
            SvgPicture.asset("assets/Images/Intersect (3).svg",width:width,),
           SvgPicture.asset(AppAssets.logo1),
-          Spacer(flex: 5,),
-          Text("Get Started", style: TextStyle(fontFamily: 'Itim', fontSize: 45)),
+          Spacer(flex: 2,),
+          Text("Get Started", style: TextStyle(fontSize: 45)),
           Spacer(flex: 1,),
           Text(
             "Go and enjoy our features for free and\n make your life easy with us.",
@@ -28,9 +28,9 @@ class Onboarding1View extends StatelessWidget {
                 fontWeight: FontWeight.w300),
             textAlign: TextAlign.center,
           ),
-          Spacer(flex: 2,),
+          Spacer(flex: 4,),
           Letstartbutton(),
-          Spacer(flex: 1,),
+          Spacer(flex: 2,),
            SvgPicture.asset("assets/Images/Intersect (4).svg",width:width,)
         ],
       ),
