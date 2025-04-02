@@ -40,7 +40,7 @@ class Onboarding3View extends StatelessWidget {
             right: 20,
             child: Getstartedcircularbutton(
               ontap: () {
-                context.go('/Home');
+                context.go('/Main');
               },
             ),
           ),

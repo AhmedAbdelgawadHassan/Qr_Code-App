@@ -1,4 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, non_constant_identifier_names
 import 'package:flutter/material.dart';
 import 'package:qr_code/Core/Utils/App_Colors.dart';
 
@@ -18,15 +17,14 @@ class CustomBottomBar extends StatelessWidget {
     return Container(
       height: 75,
       decoration: BoxDecoration(
-        color: Color(0xff333333),
-        borderRadius: BorderRadius.circular(25),
+        color: AppColors.secondaryColor,
+        borderRadius: BorderRadius.circular(15),
         border: Border.all(color: AppColors.primaryColor, width: 2),
       ),
       child: Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.center,
         children: [
-          // Row for side icons
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -50,11 +48,9 @@ class CustomBottomBar extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(width: 40), // To leave space for center button
-              // History Button
+              SizedBox(width: 50),
               MaterialButton(
                 onPressed: HistoreyOnTap,
-
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(100),
                 ),
@@ -74,7 +70,6 @@ class CustomBottomBar extends StatelessWidget {
               ),
             ],
           ),
-          // Center Glowing Button (Scan Button)
           Positioned(
             top: -60, // To make it go out of the container
             child: MaterialButton(

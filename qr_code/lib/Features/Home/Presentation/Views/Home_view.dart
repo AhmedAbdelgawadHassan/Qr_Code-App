@@ -1,18 +1,20 @@
 // ignore_for_file: unused_field, unused_element
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:qr_code/Features/Generate_Qr/Presentation/Views/Generate_view.dart';
+import 'package:qr_code/Features/History/Presentation/Views/History_View.dart';
 import 'package:qr_code/Features/Home/Presentation/views/widgets/AppBar_Icon.dart';
 import 'package:qr_code/Features/Home/Presentation/views/widgets/CustomButtonBar.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff191919),
-      body: Center(
+     body:  Center(
         child: Column(
           children: [
             Container(
@@ -45,13 +47,14 @@ class HomeView extends StatelessWidget {
                 ],
               ),
             ),
+            // Spacer(),
+            // CustomBottomBar(
+            //   mainButtonOnTap: () {},
+            //   GenerateOnTap: () {},
+            //   HistoreyOnTap: () {},
+            // ),
           ],
         ),
-      ),
-      bottomNavigationBar: CustomBottomBar(
-        mainButtonOnTap: () {},
-        GenerateOnTap: () {},
-        HistoreyOnTap: () {},
       ),
     );
   }
