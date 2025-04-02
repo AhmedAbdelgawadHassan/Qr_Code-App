@@ -1,5 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors
-
+// ignore_for_file: use_key_in_widget_constructors, non_constant_identifier_names
 import 'package:flutter/material.dart';
 import 'package:qr_code/Core/Utils/App_Colors.dart';
 
@@ -8,11 +7,12 @@ class CustomBottomBar extends StatelessWidget {
   final VoidCallback GenerateOnTap;
   final VoidCallback HistoreyOnTap;
 
-  const CustomBottomBar(
-      {super.key,
-      required this.mainButtonOnTap,
-      required this.GenerateOnTap,
-      required this.HistoreyOnTap});
+  const CustomBottomBar({
+    super.key,
+    required this.mainButtonOnTap,
+    required this.GenerateOnTap,
+    required this.HistoreyOnTap,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,49 +30,61 @@ class CustomBottomBar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              // Generate Button
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                      onPressed: GenerateOnTap,
-                      icon: Icon(Icons.qr_code, color: Colors.white)),
-                  Text('Generate',
+              MaterialButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(100),
+                ),
+                onPressed: GenerateOnTap,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.qr_code, color: Colors.white, size: 30),
+                    Text(
+                      'Generate',
                       style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
-                ],
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              // Placeholder for center button space
+
               SizedBox(width: 40), // To leave space for center button
               // History Button
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                      onPressed: HistoreyOnTap,
-                      icon: Icon(Icons.history, color: Colors.white)),
-                  Text('History',
+              MaterialButton(
+                onPressed: HistoreyOnTap,
+
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(100),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.history, color: Colors.white, size: 30),
+                    Text(
+                      'History',
                       style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
-                ],
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
           // Center Glowing Button (Scan Button)
           Positioned(
             top: -60, // To make it go out of the container
-            child: GestureDetector(
-              onTap: mainButtonOnTap,
-              child: Container(
-                decoration: BoxDecoration(),
-                // child: Image(
-                //   image: AssetImage(
-                //     'assets/images/Group 32.png',
-                //   ),
-                // ),
+            child: MaterialButton(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100)
               ),
+              onPressed: mainButtonOnTap,
+              child: Image.asset("assets/Images/Group 32 (1).png"),
             ),
-          )
+          ),
         ],
       ),
     );
