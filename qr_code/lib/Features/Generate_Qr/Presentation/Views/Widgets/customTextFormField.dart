@@ -21,8 +21,8 @@ class Customtextformfield extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("$label", style: TextStyle(color: Colors.white, fontSize: 20)),
-        SizedBox(height: 7),
+        Text("$label", style: TextStyle(color: Colors.white, fontSize: 18,fontWeight: FontWeight.w300)),
+        SizedBox(height: 5),
         SizedBox(
           width: widthScreen*ScreenRatio,    // width of textfield related to container width (Responsive)
           child: TextFormField(
