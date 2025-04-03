@@ -9,13 +9,13 @@ class InstgramcardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var widthScreen = MediaQuery.of(context).size.height;
+    var heightScreen = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Color(0xff525252),
       body: SingleChildScrollView(
         child: SizedBox(
           height:
-              widthScreen, // to prevent error for putting stack inside Column
+              heightScreen, // to prevent error for putting stack inside Column
           child: Stack(
             alignment: Alignment.center,
             children: [
