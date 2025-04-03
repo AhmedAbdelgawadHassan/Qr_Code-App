@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code/Core/Helpers/BuildCircle_Method.dart';
 import 'package:qr_code/Core/Widgets/CustomAppBarCard.dart';
+import 'package:qr_code/Core/utils/App_Assets.dart';
 import 'package:qr_code/Features/Generate_Qr/Presentation/Views/Widgets/TextFieldCard_Container.dart';
 
 class TextcardView extends StatelessWidget {
@@ -38,7 +39,7 @@ class TextcardView extends StatelessWidget {
               ),
               Positioned(
                 top: 200,
-                child: TextfieldcardContainer(),
+                child: TextfieldcardContainer(label: "Text", hintText: "Enter text", maxLines: 1, GenerateQr_Onpressed: (){}, image: AppAssets.TextIcone1)
               ),
             ],
           ),
