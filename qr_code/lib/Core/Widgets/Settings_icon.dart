@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qr_code/Core/Utils/App_Colors.dart';
 
 class Settings_Icon extends StatelessWidget {
-  const Settings_Icon({
-    super.key,
-  });
+  const Settings_Icon({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 45,
-      height:40,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.primaryColor,
-            offset: Offset(1, 1),
-            blurRadius: 7,
-          )
-        ],
-        color: AppColors.secondaryColor,
-        borderRadius: BorderRadius.circular(10)
-      ),
-      child: IconButton(
-        onPressed: () {},
-        icon: Icon(Icons.format_align_right_rounded, color:AppColors.primaryColor,size: 20,),
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        width: 50,
+        height: 45,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: const Color.fromARGB(255, 26, 25, 25),
+              offset: Offset(2, 2),
+              blurRadius: 15,
+            ),
+          ],
+          color: AppColors.secondaryColor,
+          borderRadius: BorderRadius.circular(7),
+        ),
+        child: MaterialButton(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
+          child: SvgPicture.asset("assets/Images/ri_menu-3-line.svg"),
+          onPressed: () {},
+        ),
       ),
     );
   }

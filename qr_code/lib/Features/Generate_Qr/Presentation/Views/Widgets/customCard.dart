@@ -13,6 +13,7 @@ class Customcard extends StatelessWidget {
     return GestureDetector(
       onTap: cardclass.onPressed,
       child: Container(
+        padding: EdgeInsets.all(5),
         alignment: Alignment.center,
         width: widthscreen * 0.26,
         height: heightscreen * 0.098,
@@ -28,11 +29,12 @@ class Customcard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(cardclass.image),
-              SizedBox(height: 10),
+              SizedBox(height: 7),
               FittedBox(
                 child: Text(
                   cardclass.Text,
-                  style: TextStyle(color: AppColors.primaryColor),
+
+                  style: TextStyle(color: AppColors.primaryColor,fontSize: 13,fontWeight: FontWeight.bold),
                 ),
               ),
             ],

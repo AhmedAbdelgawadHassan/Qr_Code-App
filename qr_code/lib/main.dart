@@ -18,7 +18,7 @@ class Qr_Code extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routerConfig: router,
       theme: ThemeData(
-        fontFamily: 'Itim',
+        fontFamily: 'Itim',   // font family for all texts in all App
       ),
     );
   }

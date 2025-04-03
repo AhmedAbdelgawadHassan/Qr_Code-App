@@ -24,7 +24,7 @@ class GenerateView extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.transparent, // Make the Scaffold transparent
           body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 10),
             child: Column(
               children: [
                 Customappbar(),
