@@ -41,6 +41,7 @@ abstract class AppAssets
    static const String ShareIcon2="assets/Images/Vector (36).svg";
    static const String PrivacyPolicyIcon1="assets/Images/Vector (33).svg";
    static const String PrivacyPolicyIcon2="assets/Images/Vector (37).svg";
+   static const String Virate = "assets/Images/Group (3).svg";
 
 
 

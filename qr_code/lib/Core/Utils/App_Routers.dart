@@ -18,6 +18,7 @@ import 'package:qr_code/Features/Onboarding/Presentation/Views/MainView.dart';
 import 'package:qr_code/Features/Onboarding/Presentation/Views/Onboarding1_View.dart';
 import 'package:qr_code/Features/Onboarding/Presentation/Views/Onboarding2_View.dart';
 import 'package:qr_code/Features/Onboarding/Presentation/Views/Onboarding3_View.dart';
+import 'package:qr_code/Features/Settings/Presentation/Views/Settings_view.dart';
 import 'package:qr_code/Features/Splash/Presentation/Views/Splash_View.dart';
 
 GoRouter router = GoRouter(
@@ -42,5 +43,6 @@ GoRouter router = GoRouter(
     GoRoute(path: '/Twitter', builder: (context, state) => const TwittercardView ()),
     GoRoute(path: '/Instagram', builder: (context, state) => const InstgramcardView()),
     GoRoute(path: '/Telephone', builder: (context, state) => const TelephonecardView ()),
+    GoRoute(path: '/Settings', builder: (context, state) => const SettingsView()),
     ],
 );
